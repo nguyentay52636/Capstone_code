@@ -1,7 +1,17 @@
 * {
     font-size: 16px;
+    list-style: none;
+    font-family: 'Jost', sans-serif;
 }
-
+p {
+    margin: 0 ; 
+    padding:  0 ;
+    font-size: 17px ;
+    line-height: 27px;
+    color: #7e7d7d;
+    opacity: .8;
+    
+}
 /* HEADER   */
 .navbar .collapse button{
     width: 45px;
@@ -45,4 +55,46 @@ font-weight: 700;
 .navbar .collapse .nav-item a {
     font-size: 15px ;
     font-weight: 600;
+}
+
+/* CAROUSEL */
+.img-fluid {
+    max-width: 100%;
+    height: auto;}
+.radius-image {
+border-radius: 8px;
+}
+/* ABOUT US  */
+img {
+width: 100%;
+height: auto;
+}
+.title-small {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #7e7d7d;
+}
+.title-big {
+    font-size: 35px;
+    font-weight: 700; 
+    line-height: 45px;
+}
+.about__us .about-list li a {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: black;
+}
+.about__us .about-list li i {
+border: 1px solid transparent;
+color:white ; 
+background-color:rgba(0, 128, 0, 0.74) ; 
+border-radius: 50%;
+
+}
+.about__us .about-list ul {
+    margin-left: -50px;
 }
