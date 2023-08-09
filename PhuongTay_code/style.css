@@ -12,6 +12,15 @@ p {
     opacity: .8;
     
 }
+a {
+    text-decoration: none;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* HEADER   */
 .navbar .collapse button{
     width: 45px;
@@ -58,9 +67,47 @@ font-weight: 700;
 }
 
 /* CAROUSEL */
-.img-fluid {
-    max-width: 100%;
-    height: auto;}
+.carousel { 
+
+}
+.carousel__content h1 {
+font-size:65px ;
+/* color: #fff ; */
+font-weight: 600;
+line-height: 1.1 ;
+max-width: 880px;
+}
+.carousel__content p {
+font-size: 20px ;
+line-height: 30px ;
+letter-spacing: 0.01rem;
+max-width: 680px;
+border-radius: 8px;
+color:white ;
+
+}
+.carousel-item {
+position: relative;
+}
+.carousel-inner .carousel-item  .carousel__content{
+    position: absolute;
+/* transform: translate(-50%,-50%);
+left:50%; 
+top:50% ;  */
+width: 100%;
+height: 100%;
+top:0 ;
+left: 0;
+background: rgba(39,43,54,.5);
+display: flex;
+justify-content: center;
+align-items: center;
+color :white ; 
+flex-direction: column;
+
+}
+
+
 .radius-image {
 border-radius: 8px;
 }
@@ -137,3 +184,71 @@ border-radius: 50%;
     font-weight: 600;
     line-height: 18px;
     }
+
+
+
+/* SERVICES  */
+.services__item  .services__text {
+text-align: center;
+}
+.services {
+    position: relative;
+}
+.btn-style1 {
+    padding: 8px 35px;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+    color: var(--heading-color);
+    border-radius: var(--border-radius);
+}
+.btn-style1:hover {
+color:green;
+}
+.services__item a img {
+    border-radius: 6px;
+    width: 100%;
+}
+ 
+#services__title {
+transform: translateY(-25px);
+color: black;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 28px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 12px 35px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
+    opacity:  0.5s;
+}
+#services__title:hover {
+    color:green;
+    list-style: none;
+    text-decoration: none;
+}
+.back_to_top {
+    opacity: 0;
+}
+.back_to_top i {
+    color: white;
+    font-size: 16px;
+    width: 50px;
+    line-height: 50px;
+    height: 50px;
+    position: fixed;
+    background: green;
+    z-index: 100;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    border-radius: 35px;
+    border:none;
+}
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
