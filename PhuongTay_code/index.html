@@ -9,6 +9,8 @@
     <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
    <!-- animation  -->
    <link
     rel="stylesheet"
@@ -18,22 +20,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
+  <body class="dark">
+  
+   
     <header id="site-header" class="fixed-top main-header nav-fixed"> 
 
         <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-white ">
+      <nav class="navbar-corpvisition navbar navbar-expand-lg navbar-white ">
         <a class="navbar-brand" href="#">
           <i class="fa fa-align-right"></i>
           <span>Corp Vision</span>
           <br>
           <span class="logo">Vision to your Future</span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-corpvisition" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
         </button>
       
-        <div class="collapse navbar-collapse m-4 pl-4" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse m-4 pl-4" id="navbar-corpvisition">
           <ul class="navbar-nav mx-lg-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
@@ -70,7 +74,12 @@
               <label class="theme-switch" for="checkbox">
                 <div class="mode-container">
                   <!-- <i class="fa fa-sun"></i> -->
-                  <i class="fa fa-moon"></i>
+                  <button class="btn btn-outline-none border-none" id="switch-mode">
+                    <i class="bi bi-sun"></i>
+                  </button>
+                  <!-- <button class="btn btn-outline-none border-none" id="switch-mode">
+                  <i class="bi bi-sun"></i>
+                  </button> -->
                 </div>
               </label>
             </div>
@@ -149,13 +158,11 @@
         </div>
       </div>
       <div class="slider__carousel">
-        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-arrow-left"></i></span>
-          <span class="sr-only">Previous</span>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev" aria-hidden="true">
+          <i class="bi bi-arrow-left-short"></i>
         </button>
-        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
-          <span class="sr-only">Next</span>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next" aria-hidden="true">
+          <i class="bi bi-arrow-right-short"></i>
         </button>
     </div>
     <div class="shape">
@@ -311,6 +318,7 @@
    <section class="feedback"></section>
    <section class="latest__News"></section>
    <footer></footer>
+
    <a class="back_to_top cd-top text-replace js-cd-top" href="#"><i class="fa fa-angle-up"></i></a>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -326,6 +334,7 @@
     ></script>
     <script src="../js_code/util.js"></script>
     <script src="../js_code/main-backtotop.js"></script>
+    <script src="../js_code/main.js"></script>
 <script>
 
   $(window).on("scroll", function () {
@@ -352,6 +361,26 @@
       }
     });
   });
+</script>
+<!-- xử lí switch mode  -->
+<script>
+  const body = document.body ; 
+  const switch_mode =document.querySelector('#switch-mode i') ; 
+  let mode = localStorage.getItem('darkmode') ; 
+  if(mode == 'true') {
+    body.classList('dark') ; 
+  }
+  switch_mode.addEventListener('click' , () =>{
+ //alert('clicked!');
+ 
+  let mode = body.classList.toggle('dark');
+  switch_mode.classList.toggle('bi-moon');
+  switch_mode.classList.toggle('bi-sun');
+
+ 
+  });
+  //localstorage
+  localStorage.setItem('darkmode',mode) ; 
 
 </script>
   </body>
