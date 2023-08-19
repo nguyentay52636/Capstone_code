@@ -489,3 +489,6 @@ body.dark .carousel__overlay {
 background-color: rgba(29, 42, 55, 0.6);
 }
 /* RESPONSIVE  */
+@media screen and (max-Width :768px) {
+ 
+}
