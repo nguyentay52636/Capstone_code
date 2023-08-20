@@ -540,6 +540,7 @@ background-color: rgba(29, 42, 55, 0.6);
     font-weight: 600;
     font-size: 2.1rem;
     line-height: 2.8rem;
+    color: #3f3a64;
   }
   
   #feedback {
@@ -843,3 +844,67 @@ background-color: rgba(29, 42, 55, 0.6);
     background-color: #e77654;
     background-image: linear-gradient(to right, #e77654, #e5529a);
   }
+
+  /* sữa thêm  */
+ #feedback .aboutinfo .information h3 {
+  color:#3f3a64;
+}
+
+body.dark .title-big  {
+  color: #fff ; 
+}
+body.dark {
+  background-color: #000;
+  color :#fff; 
+}
+body.dark #feedback {
+  background-color: #000;
+  color:#fff;
+}
+body.dark .slick-dots li button {
+  color:#5c51ff !important;
+}
+body.dark .card {
+  background-color: #000;
+}
+body.dark .card .describe {
+  color:#fff;
+}
+body.dark .card .card-footer {
+  background: #000;
+
+}
+.card .card-footer {
+  background-color: white;
+}
+body.dark .describe-footer {
+  color:#fff;
+}
+body.dark .card .card-footer a img {
+  border-radius: 50%;
+}
+body.dark #feedback .aboutinfo .information h3 {
+  color:white;
+}
+/* body.dark #site-header {
+background-color: black ;
+} */
+body.dark header.nav-fixed {
+  background: #000 !important;
+  color:#fff !important;
+}
+body.dark .nav-fixed .navbar-expand-lg .navbar-brand {
+  color:#fff;
+}
+body.dark .nav-fixed .navbar-expand-lg .navbar-nav .nav-link {
+color:white;
+}
+body.dark .nav-fixed .navbar-expand-lg .navbar-nav .active a {
+  color:#009f4d;
+}
+/* body.dark .mobile-position .mode-container button {
+  color:white !important;
+} */
+body.dark .mobile-position .mode-container .btn i {
+  color:white;
+}
